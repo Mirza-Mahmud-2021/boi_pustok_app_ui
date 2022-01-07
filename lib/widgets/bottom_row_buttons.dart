@@ -25,13 +25,16 @@ class _BottomRowButtonsState extends State<BottomRowButtons> {
           alignment: Alignment.center,
           padding: const EdgeInsets.all(2.0),
           decoration: BoxDecoration(borderRadius: BorderRadius.circular(10.0), border: Border.all(color: Colors.red, width: 2.0)),
-          child: FlatButton(
+          child: GestureDetector(
 
-            height: 50.0, minWidth: 50.0,
-            onPressed: (){},
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
-            color: Colors.red,
-            child: const Icon(Icons.facebook, color: Colors.white, size: 25.0),
+            onTap: (){},
+            child: Container(
+          
+              height: 50.0, width: 50.0,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(borderRadius: BorderRadius.circular(10.0), color: Colors.red),
+              child: const Icon(Icons.facebook, color: Colors.white, size: 30.0),
+            ),
           ),
         ),
 
@@ -43,13 +46,15 @@ class _BottomRowButtonsState extends State<BottomRowButtons> {
           alignment: Alignment.center,
           padding: const EdgeInsets.all(2.0),
           decoration: BoxDecoration(borderRadius: BorderRadius.circular(10.0), border: Border.all(color: Colors.red, width: 2.0)),
-          child: FlatButton(
+          child: GestureDetector(
 
-            height: 50.0, minWidth: 50.0,
-            onPressed: (){},
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
-            color: Colors.red,
-            child: const Icon(Icons.sync, color: Colors.white, size: 25.0),
+            onTap: (){},
+            child: Container(
+          
+              height: 50.0, width: 50.0,
+              decoration: BoxDecoration(borderRadius: BorderRadius.circular(10.0), color: Colors.red,),
+              child: const Icon(Icons.sync, color: Colors.white, size: 30.0),
+            ),
           ),
         ),
 
@@ -61,13 +66,15 @@ class _BottomRowButtonsState extends State<BottomRowButtons> {
           alignment: Alignment.center,
           padding: const EdgeInsets.all(2.0),
           decoration: BoxDecoration(borderRadius: BorderRadius.circular(10.0), border: Border.all(color: Colors.grey, width: 2.0)),
-          child: FlatButton(
+          child: GestureDetector(
 
-            height: 50.0, minWidth: 50.0,
-            onPressed: (){},
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
-            color: Colors.grey,
-            child: const Icon(Icons.block, color: Colors.white, size: 25.0),
+            onTap: (){},
+            child: Container(
+          
+              height: 50.0, width: 50.0,
+              decoration: BoxDecoration(borderRadius: BorderRadius.circular(10.0), color: Colors.grey),
+              child: const Icon(Icons.block, color: Colors.white, size: 30.0),
+            ),
           ),
         ),
 
@@ -79,13 +86,15 @@ class _BottomRowButtonsState extends State<BottomRowButtons> {
           alignment: Alignment.center,
           padding: const EdgeInsets.all(2.0),
           decoration: BoxDecoration(borderRadius: BorderRadius.circular(10.0), border: Border.all(color: Colors.blue, width: 2.0)),
-          child: FlatButton(
+          child: GestureDetector(
 
-            height: 50.0, minWidth: 50.0,
-            onPressed: (){},
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
-            color: Colors.blue,
-            child: const Icon(Icons.share_rounded, color: Colors.white, size: 25.0),
+            onTap: (){},
+            child: Container(
+          
+              height: 50.0, width: 50.0,
+              decoration: BoxDecoration(borderRadius: BorderRadius.circular(10.0), color: Colors.blue),
+              child: const Icon(Icons.share_rounded, color: Colors.white, size: 30.0),
+            ),
           ),
         ),
 
@@ -96,14 +105,16 @@ class _BottomRowButtonsState extends State<BottomRowButtons> {
           height: 50.0, width: 50.0,
           alignment: Alignment.center,
           padding: const EdgeInsets.all(2.0),
-          decoration: BoxDecoration(borderRadius: BorderRadius.circular(10.0), border: Border.all(color: Colors.red, width: 2.0)),
-          child: FlatButton(
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(10.0), border: Border.all(color: Colors.blue, width: 2.0)),
+          child: GestureDetector(
 
-            height: 50.0, minWidth: 50.0,
-            onPressed: (){},
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
-            color: Colors.red,
-            child: const Icon(Icons.policy, color: Colors.white, size: 25.0),
+            onTap: (){},
+            child: Container(
+          
+              height: 50.0, width: 50.0,
+              decoration: BoxDecoration(borderRadius: BorderRadius.circular(10.0), color: Colors.blue),
+              child: const Icon(Icons.person, color: Colors.white, size: 30.0),
+            ),
           ),
         ),
       ],
