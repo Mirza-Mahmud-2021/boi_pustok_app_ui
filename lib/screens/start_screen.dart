@@ -51,7 +51,9 @@ class _StartScreenState extends State<StartScreen>
                   alignment: Alignment.center,
                   child: const Text(
 
-                    "12:15:21", style: TextStyle(color: Colors.white, fontSize: 22.0, fontWeight: FontWeight.w500),
+                    "12:15:21", 
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: Colors.white, fontSize: 22.0, fontWeight: FontWeight.w500),
                   ),
                 ),
               ),

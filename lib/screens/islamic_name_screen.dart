@@ -1,36 +1,43 @@
 import 'package:boi_pustok_app_ui/widgets/appbar_leading.dart';
 import 'package:flutter/material.dart';
 
-class SMSScreen extends StatefulWidget 
-{
-  const SMSScreen({ Key? key }) : super(key: key);
+class IslamicNameScreen extends StatefulWidget {
+
+  const IslamicNameScreen({ Key? key }) : super(key: key);
 
   @override
-  _SMSScreenState createState() => _SMSScreenState();
+  _EnglishConverScreenState createState() => _EnglishConverScreenState();
 }
 
-class _SMSScreenState extends State<SMSScreen> 
+class _EnglishConverScreenState extends State<IslamicNameScreen> 
 {
 
-  List<String> smsList = [
+  List<String> islamicNameList = [
 
-    "হ্যাপি নিউ ইয়ার SMS বাংলা",
-    "হ্যাপি নিউ ইয়ার SMS ইংলিশ",
-    "বৈশাখী এস.এম.এস",
-    "বন্ধু এস.এম.এস",
-    "শুপ্রভাত এস.এম.এস",
-    "শুভ রাত্রি এস.এম.এস",
-    "বৃষ্টির দিনের এস.এম.এস",
-    "ইসলামিক এস.এম.এস",
-    "মিস ইউ এস.এম.এস",
-    "মা-বাবার এস.এম.এস",
-    "ঈদ মোবারক এস.এম.এস",
-    "উপদেশমূলক এস.এম.এস",
-    "মনিষীদের বাণী"
+    "ভূমিকা",
+    "শিরকী নাম",
+    "ইসলামী ও উত্তম নাম রাখার নীতি",
+    "শিশুর সুন্দর নাম রাখার গুরুত্ব",
+    "ভালো ও মন্দ নামের প্রভাব",
+    "নাম নিয়ে বাস্তব ঘটনা",
+    "নামকরণের সময়",
+    "নামকরণে কুসংস্কারের উদাহরণ",
+    "শিরকী আকীদা",
+    "নামকরণে কতিপয় লক্ষ্যণীয় দিক",
+    "তাহনীক ও আকীকা",
+    "আল্লাহর ৯৯ টি নাম, অর্থ ও ব্যাখ্যা",
+    "আল্লাহর নামে মিল রেখে নাম",
+    "নবী ও রাসূলগণের নাম",
+    "নির্বাচিত পুরুষ সাহাবীর নাম",
+    "ছেলে শিশুর আরো কিছু সুন্দর নাম",
+    "মুসলিম নেক নারীদের নাম",
+    "মহিলা সাহাবীবর্গের নাম",
+    "মেয়ে শিশুর আরো কিছু সুন্দর নাম",
+    "উপসংহার"
   ];
+
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
 
       appBar: AppBar(
@@ -66,8 +73,8 @@ class _SMSScreenState extends State<SMSScreen>
                 onPressed: (){},
                 child: const Text(
 
-                  "এস.এম.এস",
-                  textAlign: TextAlign.center, 
+                  "ইসলামিক নাম", 
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.white, 
                     fontSize: 16.0, fontWeight: FontWeight.w600
@@ -84,7 +91,7 @@ class _SMSScreenState extends State<SMSScreen>
         child: ListView.separated(
 
           scrollDirection: Axis.vertical,
-          itemCount: smsList.length,
+          itemCount: islamicNameList.length,
           separatorBuilder: (_, index) => const SizedBox(height: 8.0),
           itemBuilder: (context, index){
 
@@ -111,15 +118,16 @@ class _SMSScreenState extends State<SMSScreen>
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
                 child: Text(
 
-                  smsList[index],
+                  islamicNameList[index],
                   textAlign: TextAlign.center,
-                  style: const TextStyle(color: Colors.white, fontSize: 20.0, fontWeight: FontWeight.w700),
+                  style: const TextStyle(color: Colors.white, fontSize: 18.0, fontWeight: FontWeight.w700),
                 ),
               ),
             );
           },
         ),
       ),
+      
     );
   }
 }

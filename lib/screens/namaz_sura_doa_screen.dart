@@ -1,36 +1,29 @@
 import 'package:boi_pustok_app_ui/widgets/appbar_leading.dart';
 import 'package:flutter/material.dart';
 
-class SMSScreen extends StatefulWidget 
-{
-  const SMSScreen({ Key? key }) : super(key: key);
+class NamazSuraDoaScreen extends StatefulWidget {
+
+  const NamazSuraDoaScreen({ Key? key }) : super(key: key);
 
   @override
-  _SMSScreenState createState() => _SMSScreenState();
+  _EnglishConverScreenState createState() => _EnglishConverScreenState();
 }
 
-class _SMSScreenState extends State<SMSScreen> 
+class _EnglishConverScreenState extends State<NamazSuraDoaScreen> 
 {
 
-  List<String> smsList = [
+  List<String> namazSuraDoaList = [
 
-    "হ্যাপি নিউ ইয়ার SMS বাংলা",
-    "হ্যাপি নিউ ইয়ার SMS ইংলিশ",
-    "বৈশাখী এস.এম.এস",
-    "বন্ধু এস.এম.এস",
-    "শুপ্রভাত এস.এম.এস",
-    "শুভ রাত্রি এস.এম.এস",
-    "বৃষ্টির দিনের এস.এম.এস",
-    "ইসলামিক এস.এম.এস",
-    "মিস ইউ এস.এম.এস",
-    "মা-বাবার এস.এম.এস",
-    "ঈদ মোবারক এস.এম.এস",
-    "উপদেশমূলক এস.এম.এস",
-    "মনিষীদের বাণী"
+    "আযান","নামাজ ফরজ হওয়ার শর্ত","ওজু করার সঠিক নিয়ম","নামাজের ফরজ সমূহ",
+    "নামাজের ওয়াজিব সমূহ","নামাজের সুন্নাতে মুয়াক্কাদা","নামাজের সুন্নত সমূহ","নামাজের মোস্তাহাব সমূহ",
+    "নামাজের মাকরূহাত","ফরজ নামাজ","ফরজ নামাজের ওয়াক্ত সমূহ","সুন্নত নামাজের নিয়ম",
+    "নামাজের নিষিদ্ধ সময়","নামাজের নিষিদ্ধ কাজ সমূহ","জায়নামাজে দাঁড়িয়ে পড়ার দোআ","তাকবীরে তাহরীমা",
+    "ফজরের সুন্নত দুই রাকাতের নিয়ত","যোহরের সুন্নত চার রাকাত নামাজের\nনিয়ত", "আছরের সুন্নত চার রাকাত নামাজের\nনিয়ত","মাগরিবের তিন রাকাত ফরজ\nনামাজের নিয়ত",
+    "এশার সুন্নত চার রাকাত নামাজের\nনিয়ত","বিতরের নামাজ পড়িবার নিয়ম","তাহাজ্জুদ নামাজের নিয়ম","জুমআর নামাজ",
   ];
+
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
 
       appBar: AppBar(
@@ -46,7 +39,7 @@ class _SMSScreenState extends State<SMSScreen>
 
           Container(
 
-            width: 150.0,
+            width: 170.0,
             margin: const EdgeInsets.all(8.0),
             padding: const EdgeInsets.all(2.0),
             alignment: Alignment.center,
@@ -57,7 +50,7 @@ class _SMSScreenState extends State<SMSScreen>
             ),
             child: SizedBox(
 
-              width: 150.0, height: 30.0,
+              width: 170.0, height: 30.0,
               child: MaterialButton(
 
                 elevation: 0, focusElevation: 0, hoverElevation: 0, highlightElevation: 0,
@@ -66,8 +59,8 @@ class _SMSScreenState extends State<SMSScreen>
                 onPressed: (){},
                 child: const Text(
 
-                  "এস.এম.এস",
-                  textAlign: TextAlign.center, 
+                  "নামাজের সূরা ও দোয়া", 
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.white, 
                     fontSize: 16.0, fontWeight: FontWeight.w600
@@ -84,7 +77,7 @@ class _SMSScreenState extends State<SMSScreen>
         child: ListView.separated(
 
           scrollDirection: Axis.vertical,
-          itemCount: smsList.length,
+          itemCount: namazSuraDoaList.length,
           separatorBuilder: (_, index) => const SizedBox(height: 8.0),
           itemBuilder: (context, index){
 
@@ -111,15 +104,16 @@ class _SMSScreenState extends State<SMSScreen>
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
                 child: Text(
 
-                  smsList[index],
+                  namazSuraDoaList[index],
                   textAlign: TextAlign.center,
-                  style: const TextStyle(color: Colors.white, fontSize: 20.0, fontWeight: FontWeight.w700),
+                  style: const TextStyle(color: Colors.white, fontSize: 18.0, fontWeight: FontWeight.w700),
                 ),
               ),
             );
           },
         ),
       ),
+      
     );
   }
 }

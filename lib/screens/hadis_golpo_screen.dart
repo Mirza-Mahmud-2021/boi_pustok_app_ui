@@ -1,36 +1,36 @@
 import 'package:boi_pustok_app_ui/widgets/appbar_leading.dart';
 import 'package:flutter/material.dart';
 
-class SMSScreen extends StatefulWidget 
-{
-  const SMSScreen({ Key? key }) : super(key: key);
+class HadisGolpoScreen extends StatefulWidget {
+
+  const HadisGolpoScreen({ Key? key }) : super(key: key);
 
   @override
-  _SMSScreenState createState() => _SMSScreenState();
+  _EnglishConverScreenState createState() => _EnglishConverScreenState();
 }
 
-class _SMSScreenState extends State<SMSScreen> 
+class _EnglishConverScreenState extends State<HadisGolpoScreen> 
 {
 
-  List<String> smsList = [
+  List<String> islamicNameList = [
 
-    "হ্যাপি নিউ ইয়ার SMS বাংলা",
-    "হ্যাপি নিউ ইয়ার SMS ইংলিশ",
-    "বৈশাখী এস.এম.এস",
-    "বন্ধু এস.এম.এস",
-    "শুপ্রভাত এস.এম.এস",
-    "শুভ রাত্রি এস.এম.এস",
-    "বৃষ্টির দিনের এস.এম.এস",
-    "ইসলামিক এস.এম.এস",
-    "মিস ইউ এস.এম.এস",
-    "মা-বাবার এস.এম.এস",
-    "ঈদ মোবারক এস.এম.এস",
-    "উপদেশমূলক এস.এম.এস",
-    "মনিষীদের বাণী"
+    "অদ্ভূত আবেদন",
+    "লজ্জাশীলতা",
+    "ইসলাম গ্রহণের কাহিনী",
+    "মন্দ আচরণের ফল",
+    "গীবতের ভয়াবহতা",
+    "অত্যাচারী বাদশাহ",
+    "মদীনার পথে",
+    "খিযির ও মূসা(আ.)",
+    "রাসুল (সাঃ) এর মুজিযা",
+    "ধৈর্য ও বুদ্ধিমত্তা",
+    "আটকে পড়া যুবক",
+    "পরীক্ষা",
+    "দাজ্জাল"
   ];
+
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
 
       appBar: AppBar(
@@ -66,8 +66,8 @@ class _SMSScreenState extends State<SMSScreen>
                 onPressed: (){},
                 child: const Text(
 
-                  "এস.এম.এস",
-                  textAlign: TextAlign.center, 
+                  "হাদিসের গল্প", 
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.white, 
                     fontSize: 16.0, fontWeight: FontWeight.w600
@@ -84,7 +84,7 @@ class _SMSScreenState extends State<SMSScreen>
         child: ListView.separated(
 
           scrollDirection: Axis.vertical,
-          itemCount: smsList.length,
+          itemCount: islamicNameList.length,
           separatorBuilder: (_, index) => const SizedBox(height: 8.0),
           itemBuilder: (context, index){
 
@@ -111,15 +111,16 @@ class _SMSScreenState extends State<SMSScreen>
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
                 child: Text(
 
-                  smsList[index],
+                  islamicNameList[index],
                   textAlign: TextAlign.center,
-                  style: const TextStyle(color: Colors.white, fontSize: 20.0, fontWeight: FontWeight.w700),
+                  style: const TextStyle(color: Colors.white, fontSize: 18.0, fontWeight: FontWeight.w700),
                 ),
               ),
             );
           },
         ),
       ),
+      
     );
   }
 }

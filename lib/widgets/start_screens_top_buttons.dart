@@ -30,19 +30,23 @@ class _TopButtonsState extends State<TopButtons> {
             borderRadius: BorderRadius.circular(10.0),
             border: Border.all(color: Colors.amber, width: 2.0)
           ),
-          child: FlatButton(
+          child: MaterialButton(
 
             onPressed: (){},
+
+            elevation: 0, focusElevation: 0, highlightElevation: 0, hoverElevation: 0,
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
             minWidth: 140.0, height: 40.0,
             color: Colors.amber,
-            child: const Align(
+            child: const Text(
 
-              alignment: Alignment.center,
-              child: Text("রং পরিবর্তন", style: TextStyle(color: Colors.white, fontSize: 18.0, fontWeight: FontWeight.w600)),
+              "রং পরিবর্তন", 
+              textAlign: TextAlign.center,
+              style: TextStyle(color: Colors.white, fontSize: 18.0, fontWeight: FontWeight.w600)
             ),
-          )
+          ),
         ),
+
         const SizedBox(height: 10.0),
 
         Container(
@@ -56,21 +60,24 @@ class _TopButtonsState extends State<TopButtons> {
             borderRadius: BorderRadius.circular(10.0),
             border: Border.all(color: Colors.amber, width: 2.0)
           ),
-          child: FlatButton(
+          child: MaterialButton(
 
             onPressed: (){
 
               Navigator.push(context, MaterialPageRoute(builder: (context) => const HomeScreen()));
             },
+
+            elevation: 0, focusElevation: 0, highlightElevation: 0, hoverElevation: 0,
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
             height: 40.0, minWidth: 200.0,
             color: Colors.amber,
-            child: const Align(
+            child: const Text(
 
-              alignment: Alignment.center,
-              child: Text("বইয়ের তালিকা", style: TextStyle(color: Colors.white, fontSize: 18.0, fontWeight: FontWeight.w600)),
+              "বইয়ের তালিকা", 
+              textAlign: TextAlign.center,
+              style: TextStyle(color: Colors.white, fontSize: 18.0, fontWeight: FontWeight.w600)
             ),
-          )
+          ),
         ),
         const SizedBox(height: 10.0),
 
@@ -94,19 +101,23 @@ class _TopButtonsState extends State<TopButtons> {
                     borderRadius: BorderRadius.circular(10.0),
                     border: Border.all(color: Colors.blue, width: 2.0)
                   ),
-                  child: FlatButton(
+                  child: MaterialButton(
 
                     onPressed: (){},
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
-                    minWidth: 100.0,
-                    color: Colors.blue,
-                    child: const Align(
 
-                      alignment: Alignment.center,
-                      child: Text("আরো অ্যাপস", style: TextStyle(color: Colors.white, fontSize: 18.0, fontWeight: FontWeight.w600)),
+                    elevation: 0, focusElevation: 0, highlightElevation: 0, hoverElevation: 0,
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
+                    height: MediaQuery.of(context).size.height,
+                    minWidth: MediaQuery.of(context).size.width,
+                    color: Colors.blue,
+                    child: const Text(
+
+                      "আরো অ্যাপস", 
+                      textAlign: TextAlign.center,
+                      style: TextStyle(color: Colors.white, fontSize: 18.0, fontWeight: FontWeight.w600)
                     ),
-                  )
-                ),
+                  ),
+                )
               ),
 
               const SizedBox(width: 5.0),
@@ -124,20 +135,24 @@ class _TopButtonsState extends State<TopButtons> {
                     borderRadius: BorderRadius.circular(10.0),
                     border: Border.all(color: Colors.red, width: 2.0)
                   ),
-                  child: FlatButton(
+                  child: MaterialButton(
 
                     onPressed: (){},
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
-                    minWidth: 100.0,
-                    color: Colors.red,
-                    child: const Align(
 
-                      alignment: Alignment.center,
-                      child: Text("রেটিং দিন", style: TextStyle(color: Colors.white, fontSize: 18.0, fontWeight: FontWeight.w600)),
+                    elevation: 0, focusElevation: 0, highlightElevation: 0, hoverElevation: 0,
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
+                    height: MediaQuery.of(context).size.height,
+                    minWidth: MediaQuery.of(context).size.width,
+                    color: Colors.red,
+                    child: const Text(
+
+                      "রেটিং দিন", 
+                      textAlign: TextAlign.center,
+                      style: TextStyle(color: Colors.white, fontSize: 18.0, fontWeight: FontWeight.w600)
                     ),
                   ),
-                )
-              ),
+                ),
+              )
             ],
           ),
         ),
