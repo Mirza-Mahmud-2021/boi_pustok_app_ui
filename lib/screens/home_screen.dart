@@ -1,5 +1,9 @@
 import 'package:boi_pustok_app_ui/screens/dhadha_screen.dart';
 import 'package:boi_pustok_app_ui/screens/english_conver_screen.dart';
+import 'package:boi_pustok_app_ui/screens/hadis_golpo_screen.dart';
+import 'package:boi_pustok_app_ui/screens/islamic_name_screen.dart';
+import 'package:boi_pustok_app_ui/screens/jokes_screen.dart';
+import 'package:boi_pustok_app_ui/screens/namaz_sura_doa_screen.dart';
 import 'package:boi_pustok_app_ui/screens/sms_screen.dart';
 import 'package:boi_pustok_app_ui/widgets/appbar_leading.dart';
 import 'package:flutter/material.dart';
@@ -22,14 +26,18 @@ class _HomeScreenState extends State<HomeScreen>
 
     const DhaDhaScreen(),
     const SMSScreen(),
-    const EnglishConverScreen()
+    const EnglishConverScreen(),
+    const JokesScreen(),
+    const IslamicNameScreen(),
+    const HadisGolpoScreen(),
+    const NamazSuraDoaScreen(),
   ];
 
   List<String> textList = [
 
     "মজার মজার ধাঁধা",
     "এস.এম.এস",
-    "ইংরেজী\nকথপোকথন",
+    "ইংরেজী\nকথোপকথন",
 
     "জোকস",
     "ইসলামিক নাম",
@@ -115,7 +123,11 @@ class _HomeScreenState extends State<HomeScreen>
                 color: Theme.of(context).primaryColor,
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
                 onPressed: (){},
-                child: const Text("বইয়ের তালিকা", style: TextStyle(color: Colors.white, fontSize: 16.0, fontWeight: FontWeight.w600)),
+                child: const Text(
+                  
+                  "বইয়ের তালিকা", 
+                  textAlign: TextAlign.center,
+                  style: TextStyle(color: Colors.white, fontSize: 16.0, fontWeight: FontWeight.bold)),
               ),
             ),
           )

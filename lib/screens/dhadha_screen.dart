@@ -54,7 +54,7 @@ class _DhaDhaScreenState extends State<DhaDhaScreen>
 
           Container(
 
-            width: 150.0,
+            width: 170.0,
             margin: const EdgeInsets.all(8.0),
             padding: const EdgeInsets.all(2.0),
             alignment: Alignment.center,
@@ -65,7 +65,7 @@ class _DhaDhaScreenState extends State<DhaDhaScreen>
             ),
             child: SizedBox(
 
-              width: 150.0, height: 30.0,
+              width: 170.0, height: 30.0,
               child: MaterialButton(
 
                 elevation: 0, focusElevation: 0, hoverElevation: 0, highlightElevation: 0,
@@ -74,10 +74,11 @@ class _DhaDhaScreenState extends State<DhaDhaScreen>
                 onPressed: (){},
                 child: const Text(
 
-                  "মজার মজার ধাঁধা", 
+                  "মজার মজার ধাঁধা",
+                  textAlign: TextAlign.center, 
                   style: TextStyle(
                     color: Colors.white, 
-                    fontSize: 16.0, fontWeight: FontWeight.w600
+                    fontSize: 16.0, fontWeight: FontWeight.bold
                   )
                 ),
               ),
@@ -98,7 +99,7 @@ class _DhaDhaScreenState extends State<DhaDhaScreen>
             return Container(
 
               width: MediaQuery.of(context).size.width,
-              height: 40.0,
+              height: 60.0,
               alignment: Alignment.center,
               padding: const EdgeInsets.all(2.0),
               decoration: BoxDecoration(

@@ -1,36 +1,31 @@
 import 'package:boi_pustok_app_ui/widgets/appbar_leading.dart';
 import 'package:flutter/material.dart';
 
-class SMSScreen extends StatefulWidget 
-{
-  const SMSScreen({ Key? key }) : super(key: key);
+class JokesScreen extends StatefulWidget {
+
+  const JokesScreen({ Key? key }) : super(key: key);
 
   @override
-  _SMSScreenState createState() => _SMSScreenState();
+  _EnglishConverScreenState createState() => _EnglishConverScreenState();
 }
 
-class _SMSScreenState extends State<SMSScreen> 
+class _EnglishConverScreenState extends State<JokesScreen> 
 {
 
-  List<String> smsList = [
+  List<String> jokesList = [
 
-    "হ্যাপি নিউ ইয়ার SMS বাংলা",
-    "হ্যাপি নিউ ইয়ার SMS ইংলিশ",
-    "বৈশাখী এস.এম.এস",
-    "বন্ধু এস.এম.এস",
-    "শুপ্রভাত এস.এম.এস",
-    "শুভ রাত্রি এস.এম.এস",
-    "বৃষ্টির দিনের এস.এম.এস",
-    "ইসলামিক এস.এম.এস",
-    "মিস ইউ এস.এম.এস",
-    "মা-বাবার এস.এম.এস",
-    "ঈদ মোবারক এস.এম.এস",
-    "উপদেশমূলক এস.এম.এস",
-    "মনিষীদের বাণী"
+    "স্বামী স্ত্রী জোকস",
+    "ছাত্র শিক্ষক জোকস",
+    "প্রেমিক প্রেমিকার জোকস",
+    "বন্ধুদের জোকস",
+    "মিরাক্কেল জোকস",
+    "চোর-পুলিশ",
+    "নাসিরুদ্দিন হোজ্জা",
+    "গোপাল ভাঁড়"
   ];
+
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
 
       appBar: AppBar(
@@ -66,8 +61,8 @@ class _SMSScreenState extends State<SMSScreen>
                 onPressed: (){},
                 child: const Text(
 
-                  "এস.এম.এস",
-                  textAlign: TextAlign.center, 
+                  "জোকস", 
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.white, 
                     fontSize: 16.0, fontWeight: FontWeight.w600
@@ -84,7 +79,7 @@ class _SMSScreenState extends State<SMSScreen>
         child: ListView.separated(
 
           scrollDirection: Axis.vertical,
-          itemCount: smsList.length,
+          itemCount: jokesList.length,
           separatorBuilder: (_, index) => const SizedBox(height: 8.0),
           itemBuilder: (context, index){
 
@@ -111,7 +106,7 @@ class _SMSScreenState extends State<SMSScreen>
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
                 child: Text(
 
-                  smsList[index],
+                  jokesList[index],
                   textAlign: TextAlign.center,
                   style: const TextStyle(color: Colors.white, fontSize: 20.0, fontWeight: FontWeight.w700),
                 ),
@@ -120,6 +115,7 @@ class _SMSScreenState extends State<SMSScreen>
           },
         ),
       ),
+      
     );
   }
 }
