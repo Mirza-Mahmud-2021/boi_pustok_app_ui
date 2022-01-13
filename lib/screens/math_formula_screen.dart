@@ -1,27 +1,26 @@
 import 'package:boi_pustok_app_ui/widgets/appbar_leading.dart';
 import 'package:flutter/material.dart';
 
-class JokesScreen extends StatefulWidget {
+class MathFormulaScreen extends StatefulWidget {
 
-  const JokesScreen({ Key? key }) : super(key: key);
+  const MathFormulaScreen({ Key? key }) : super(key: key);
 
   @override
-  _JokesScreenState createState() => _JokesScreenState();
+  _MathFormulaScreenState createState() => _MathFormulaScreenState();
 }
 
-class _JokesScreenState extends State<JokesScreen> 
+class _MathFormulaScreenState extends State<MathFormulaScreen>
 {
 
-  List<String> jokesList = [
+  List<String> mathFormulaList = [
 
-    "স্বামী স্ত্রী জোকস",
-    "ছাত্র শিক্ষক জোকস",
-    "প্রেমিক প্রেমিকার জোকস",
-    "বন্ধুদের জোকস",
-    "মিরাক্কেল জোকস",
-    "চোর-পুলিশ",
-    "নাসিরুদ্দিন হোজ্জা",
-    "গোপাল ভাঁড়"
+    "গণিতের জনক যারা",
+    "বীজগণিতের সূত্র",
+    "পাটিগণিত এর প্রয়োজনীয় সূত্র",
+    "ত্রিকোণমিতির প্রাথমিক ধারণা",
+    "ত্রিকোণমিতির সূত্রাবলী",
+    "অঙ্কের জ্যামিতি সূত্র",
+    "পরিমিতির সূত্রাবলী"
   ];
 
   @override
@@ -61,7 +60,7 @@ class _JokesScreenState extends State<JokesScreen>
                 onPressed: (){},
                 child: const Text(
 
-                  "জোকস", 
+                  "গণিতের সূত্র", 
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.white, 
@@ -79,7 +78,7 @@ class _JokesScreenState extends State<JokesScreen>
         child: ListView.separated(
 
           scrollDirection: Axis.vertical,
-          itemCount: jokesList.length,
+          itemCount: mathFormulaList.length,
           separatorBuilder: (_, index) => const SizedBox(height: 8.0),
           itemBuilder: (context, index){
 
@@ -106,9 +105,9 @@ class _JokesScreenState extends State<JokesScreen>
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
                 child: Text(
 
-                  jokesList[index],
+                  mathFormulaList[index],
                   textAlign: TextAlign.center,
-                  style: const TextStyle(color: Colors.white, fontSize: 20.0, fontWeight: FontWeight.w700),
+                  style: const TextStyle(color: Colors.white, fontSize: 18.0, fontWeight: FontWeight.w700),
                 ),
               ),
             );

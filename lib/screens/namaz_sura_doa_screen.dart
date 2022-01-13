@@ -6,10 +6,10 @@ class NamazSuraDoaScreen extends StatefulWidget {
   const NamazSuraDoaScreen({ Key? key }) : super(key: key);
 
   @override
-  _EnglishConverScreenState createState() => _EnglishConverScreenState();
+  _NamazSuraDoaScreenState createState() => _NamazSuraDoaScreenState();
 }
 
-class _EnglishConverScreenState extends State<NamazSuraDoaScreen> 
+class _NamazSuraDoaScreenState extends State<NamazSuraDoaScreen> 
 {
 
   List<String> namazSuraDoaList = [

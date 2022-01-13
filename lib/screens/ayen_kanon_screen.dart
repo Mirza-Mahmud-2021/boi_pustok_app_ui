@@ -1,27 +1,35 @@
 import 'package:boi_pustok_app_ui/widgets/appbar_leading.dart';
 import 'package:flutter/material.dart';
 
-class JokesScreen extends StatefulWidget {
+class AyenKanonScreen extends StatefulWidget {
 
-  const JokesScreen({ Key? key }) : super(key: key);
+  const AyenKanonScreen({ Key? key }) : super(key: key);
 
   @override
-  _JokesScreenState createState() => _JokesScreenState();
+  _AyenKanonScreenState createState() => _AyenKanonScreenState();
 }
 
-class _JokesScreenState extends State<JokesScreen> 
+class _AyenKanonScreenState extends State<AyenKanonScreen> 
 {
 
-  List<String> jokesList = [
+  List<String> namazSuraDoaList = [
 
-    "স্বামী স্ত্রী জোকস",
-    "ছাত্র শিক্ষক জোকস",
-    "প্রেমিক প্রেমিকার জোকস",
-    "বন্ধুদের জোকস",
-    "মিরাক্কেল জোকস",
-    "চোর-পুলিশ",
-    "নাসিরুদ্দিন হোজ্জা",
-    "গোপাল ভাঁড়"
+    "আইন নিয়ে কিছু কথা",
+    "বাল্যবিবাহ",
+    "যৌতুক",
+    "ইভটিজিং",
+    "যৌন পীড়ন",
+    "পারিবারিক সহিংসতা",
+    "নিষিদ্ধ সংগঠন করা ও সমর্থন",
+    "নারী ও শিশু নির্যাতন",
+    "এসিড নিক্ষেপ",
+    "ধূমপান",
+    "পর্ণোগ্রাফি",
+    "আইন শৃঙ্খলা বিঘ্নকারী অপরাধ",
+    "মোবাইল ও কম্পিউটারের মাধ্যমে\nহয়রানি",
+    "ভূমি উন্নয়ন কর (খাজনা) সংক্রান্ত\nবিধানবলি",
+    "জমি ক্রয় এবং রেজিষ্ট্রেশন",
+    "গর্ভবতী মায়ের শ্রম আইন"
   ];
 
   @override
@@ -61,7 +69,7 @@ class _JokesScreenState extends State<JokesScreen>
                 onPressed: (){},
                 child: const Text(
 
-                  "জোকস", 
+                  "আইন কানুন", 
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.white, 
@@ -79,7 +87,7 @@ class _JokesScreenState extends State<JokesScreen>
         child: ListView.separated(
 
           scrollDirection: Axis.vertical,
-          itemCount: jokesList.length,
+          itemCount: namazSuraDoaList.length,
           separatorBuilder: (_, index) => const SizedBox(height: 8.0),
           itemBuilder: (context, index){
 
@@ -106,9 +114,9 @@ class _JokesScreenState extends State<JokesScreen>
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
                 child: Text(
 
-                  jokesList[index],
+                  namazSuraDoaList[index],
                   textAlign: TextAlign.center,
-                  style: const TextStyle(color: Colors.white, fontSize: 20.0, fontWeight: FontWeight.w700),
+                  style: const TextStyle(color: Colors.white, fontSize: 18.0, fontWeight: FontWeight.w700),
                 ),
               ),
             );
