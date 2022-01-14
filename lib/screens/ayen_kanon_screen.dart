@@ -73,7 +73,7 @@ class _AyenKanonScreenState extends State<AyenKanonScreen>
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.white, 
-                    fontSize: 16.0, fontWeight: FontWeight.w600
+                    fontSize: 14.0, fontWeight: FontWeight.bold
                   )
                 ),
               ),

@@ -1,13 +1,19 @@
 import 'package:boi_pustok_app_ui/screens/ayen_kanon_screen.dart';
+import 'package:boi_pustok_app_ui/screens/boi_pustok_screen.dart';
 import 'package:boi_pustok_app_ui/screens/dhadha_screen.dart';
 import 'package:boi_pustok_app_ui/screens/english_conver_screen.dart';
+import 'package:boi_pustok_app_ui/screens/english_shikhar_poddhoti_screen.dart';
 import 'package:boi_pustok_app_ui/screens/hadis_golpo_screen.dart';
+import 'package:boi_pustok_app_ui/screens/iccha_shokti_screen.dart';
 import 'package:boi_pustok_app_ui/screens/islamic_name_screen.dart';
 import 'package:boi_pustok_app_ui/screens/jokes_screen.dart';
 import 'package:boi_pustok_app_ui/screens/life_change_screen.dart';
+import 'package:boi_pustok_app_ui/screens/manob_deho_screen.dart';
 import 'package:boi_pustok_app_ui/screens/math_formula_screen.dart';
 import 'package:boi_pustok_app_ui/screens/namaz_sura_doa_screen.dart';
+import 'package:boi_pustok_app_ui/screens/rohossomoy_prithibi_screen.dart';
 import 'package:boi_pustok_app_ui/screens/shishuder_rupkotha_screen.dart';
+import 'package:boi_pustok_app_ui/screens/smart_phone_somossa_somadhan_screen.dart';
 import 'package:boi_pustok_app_ui/screens/sms_screen.dart';
 import 'package:boi_pustok_app_ui/screens/sofol_houyar_upai_screen.dart';
 import 'package:boi_pustok_app_ui/widgets/appbar_leading.dart';
@@ -41,6 +47,12 @@ class _HomeScreenState extends State<HomeScreen>
     const SofolHouyarUpaiScreen(),
     const LifeChangeScreen(),
     const ShiShuderRupkothaScreen(),
+    const EnglishShikharPoddhotiScreen(),
+    const IcchaShoktiScreen(),
+    const SmartPhoneSomossaSomadhanScreen(),
+    const RohossomoyPrithibiScreen(),
+    const BoiPustokScreen(),
+    const ManobDehoScreen()
   ];
 
   List<String> textList = [
@@ -137,7 +149,7 @@ class _HomeScreenState extends State<HomeScreen>
                   
                   "বইয়ের তালিকা", 
                   textAlign: TextAlign.center,
-                  style: TextStyle(color: Colors.white, fontSize: 16.0, fontWeight: FontWeight.bold)),
+                  style: TextStyle(color: Colors.white, fontSize: 14.0, fontWeight: FontWeight.bold)),
               ),
             ),
           )

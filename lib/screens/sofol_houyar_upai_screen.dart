@@ -52,7 +52,7 @@ class _SofolHouyarUpaiScreenState extends State<SofolHouyarUpaiScreen>
 
           Container(
 
-            width: 150.0,
+            width: 200.0,
             margin: const EdgeInsets.all(8.0),
             padding: const EdgeInsets.all(2.0),
             alignment: Alignment.center,
@@ -63,7 +63,7 @@ class _SofolHouyarUpaiScreenState extends State<SofolHouyarUpaiScreen>
             ),
             child: SizedBox(
 
-              width: 150.0, height: 30.0,
+              width: 200.0, height: 30.0,
               child: MaterialButton(
 
                 elevation: 0, focusElevation: 0, hoverElevation: 0, highlightElevation: 0,
@@ -76,7 +76,7 @@ class _SofolHouyarUpaiScreenState extends State<SofolHouyarUpaiScreen>
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.white, 
-                    fontSize: 16.0, fontWeight: FontWeight.w600
+                    fontSize: 14.0, fontWeight: FontWeight.bold
                   )
                 ),
               ),

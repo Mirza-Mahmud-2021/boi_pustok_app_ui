@@ -1,26 +1,29 @@
 import 'package:boi_pustok_app_ui/widgets/appbar_leading.dart';
 import 'package:flutter/material.dart';
 
-class MathFormulaScreen extends StatefulWidget {
+class RohossomoyPrithibiScreen extends StatefulWidget {
 
-  const MathFormulaScreen({ Key? key }) : super(key: key);
+  const RohossomoyPrithibiScreen({ Key? key }) : super(key: key);
 
   @override
-  _MathFormulaScreenState createState() => _MathFormulaScreenState();
+  _RohossomoyPrithibiScreenState createState() => _RohossomoyPrithibiScreenState();
 }
 
-class _MathFormulaScreenState extends State<MathFormulaScreen>
+class _RohossomoyPrithibiScreenState extends State<RohossomoyPrithibiScreen>
 {
 
-  List<String> mathFormulaList = [
+  List<String> shishuderRupkotharList = [
 
-    "গণিতের জনক যারা",
-    "বীজগণিতের সূত্র",
-    "পাটিগণিত এর প্রয়োজনীয় সূত্র",
-    "ত্রিকোণমিতির প্রাথমিক ধারণা",
-    "ত্রিকোণমিতির সূত্রাবলী",
-    "অঙ্কের জ্যামিতি সূত্র",
-    "পরিমিতির সূত্রাবলী"
+    "পর্ব-১",
+    "পর্ব-১",
+    "পর্ব-১",
+    "পর্ব-১",
+    "পর্ব-১",
+    "পর্ব-১",
+    "পর্ব-১",
+    "পর্ব-১",
+    "পর্ব-১",
+    "পর্ব-১",
   ];
 
   @override
@@ -60,7 +63,7 @@ class _MathFormulaScreenState extends State<MathFormulaScreen>
                 onPressed: (){},
                 child: const Text(
 
-                  "গণিতের সূত্র", 
+                  "রহস্যময় পৃথিবী", 
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.white, 
@@ -78,7 +81,7 @@ class _MathFormulaScreenState extends State<MathFormulaScreen>
         child: ListView.separated(
 
           scrollDirection: Axis.vertical,
-          itemCount: mathFormulaList.length,
+          itemCount: shishuderRupkotharList.length,
           separatorBuilder: (_, index) => const SizedBox(height: 8.0),
           itemBuilder: (context, index){
 
@@ -105,7 +108,7 @@ class _MathFormulaScreenState extends State<MathFormulaScreen>
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
                 child: Text(
 
-                  mathFormulaList[index],
+                  shishuderRupkotharList[index],
                   textAlign: TextAlign.center,
                   style: const TextStyle(color: Colors.white, fontSize: 18.0, fontWeight: FontWeight.w700),
                 ),

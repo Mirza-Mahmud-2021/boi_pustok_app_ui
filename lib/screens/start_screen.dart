@@ -1,5 +1,3 @@
-//import 'package:boi_pustok_app_ui/widgets/start_screen_bottom_buttons.dart';
-//import 'package:boi_pustok_app_ui/widgets/start_screen_buttons.dart';
 import 'package:boi_pustok_app_ui/widgets/bottom_row_buttons.dart';
 import 'package:boi_pustok_app_ui/widgets/start_screens_top_buttons.dart';
 import 'package:flutter/material.dart';
@@ -14,9 +12,6 @@ class StartScreen extends StatefulWidget
 
 class _StartScreenState extends State<StartScreen> 
 {
-
-  //StartScreenButtons startScreenButtons = StartScreenButtons();
-  //StartScreenBottomButtons bottomButtons = StartScreenBottomButtons();
 
   @override
   Widget build(BuildContext context) {
@@ -77,11 +72,6 @@ class _StartScreenState extends State<StartScreen>
 
               const BottomRowButtons(),
               const SizedBox(height: 20),
-
-              //startScreenButtons.colorChangeButton(),
-              //startScreenButtons.bookListButton(),
-              //startScreenButtons.rowButtons(),
-              //bottomButtons.bottomButtons(),
 
             ],
           ),
