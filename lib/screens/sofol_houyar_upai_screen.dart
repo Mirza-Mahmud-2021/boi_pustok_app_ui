@@ -1,27 +1,38 @@
 import 'package:boi_pustok_app_ui/widgets/appbar_leading.dart';
 import 'package:flutter/material.dart';
 
-class JokesScreen extends StatefulWidget {
+class SofolHouyarUpaiScreen extends StatefulWidget {
 
-  const JokesScreen({ Key? key }) : super(key: key);
+  const SofolHouyarUpaiScreen({ Key? key }) : super(key: key);
 
   @override
-  _JokesScreenState createState() => _JokesScreenState();
+  _SofolHouyarUpaiScreenState createState() => _SofolHouyarUpaiScreenState();
 }
 
-class _JokesScreenState extends State<JokesScreen> 
+class _SofolHouyarUpaiScreenState extends State<SofolHouyarUpaiScreen>
 {
 
-  List<String> jokesList = [
+  List<String> sofolHouyarList = [
 
-    "স্বামী স্ত্রী জোকস",
-    "ছাত্র শিক্ষক জোকস",
-    "প্রেমিক প্রেমিকার জোকস",
-    "বন্ধুদের জোকস",
-    "মিরাক্কেল জোকস",
-    "চোর-পুলিশ",
-    "নাসিরুদ্দিন হোজ্জা",
-    "গোপাল ভাঁড়"
+    "বিশ্বাস করুন -আপনি সফল হবেন",
+    "উক্তিসমূহ - ১",
+    "উক্তিসমূহ - ২",
+    "উক্তিসমূহ - ৩",
+    "বারবার ফেল করেও এখন তিনি\nবিশ্বসেরা",
+    "ব্যর্থতাই সফলতার চাবিকাঠি!!",
+    "বিন্দু থেকে সিন্ধু হওয়া কালজয়ীদের\nগল্প",
+    "বডেনিস মেধাবী ছাত্র মার্টিন",
+    "জীবনে সফল হতে চান?",
+    "কার্যকর যোগাযোগ",
+    "আগ্রহ",
+    "যা বিশ্বাস করেন তাই করুন",
+    "সাহস",
+    "বিনয়",
+    "নম্রতা",
+    "ব্যক্তি সচেতনতা",
+    "ভাল আচরণ",
+    "যারা ফেল করেছেন, তাদের মধ্যে\nআমিই সবচেয়ে ভালো -বিল গেটস",
+    "ক্ষুধার্ত থেকো, বোকা থেকো - স্টিভ\nজবস"
   ];
 
   @override
@@ -41,7 +52,7 @@ class _JokesScreenState extends State<JokesScreen>
 
           Container(
 
-            width: 150.0,
+            width: 200.0,
             margin: const EdgeInsets.all(8.0),
             padding: const EdgeInsets.all(2.0),
             alignment: Alignment.center,
@@ -52,7 +63,7 @@ class _JokesScreenState extends State<JokesScreen>
             ),
             child: SizedBox(
 
-              width: 150.0, height: 30.0,
+              width: 200.0, height: 30.0,
               child: MaterialButton(
 
                 elevation: 0, focusElevation: 0, hoverElevation: 0, highlightElevation: 0,
@@ -61,11 +72,11 @@ class _JokesScreenState extends State<JokesScreen>
                 onPressed: (){},
                 child: const Text(
 
-                  "জোকস", 
+                  "সফল হওয়ার উপায়", 
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.white, 
-                    fontSize: 16.0, fontWeight: FontWeight.w600
+                    fontSize: 14.0, fontWeight: FontWeight.bold
                   )
                 ),
               ),
@@ -79,7 +90,7 @@ class _JokesScreenState extends State<JokesScreen>
         child: ListView.separated(
 
           scrollDirection: Axis.vertical,
-          itemCount: jokesList.length,
+          itemCount: sofolHouyarList.length,
           separatorBuilder: (_, index) => const SizedBox(height: 8.0),
           itemBuilder: (context, index){
 
@@ -106,9 +117,9 @@ class _JokesScreenState extends State<JokesScreen>
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
                 child: Text(
 
-                  jokesList[index],
+                  sofolHouyarList[index],
                   textAlign: TextAlign.center,
-                  style: const TextStyle(color: Colors.white, fontSize: 20.0, fontWeight: FontWeight.w700),
+                  style: const TextStyle(color: Colors.white, fontSize: 18.0, fontWeight: FontWeight.w700),
                 ),
               ),
             );

@@ -1,10 +1,21 @@
+import 'package:boi_pustok_app_ui/screens/ayen_kanon_screen.dart';
+import 'package:boi_pustok_app_ui/screens/boi_pustok_screen.dart';
 import 'package:boi_pustok_app_ui/screens/dhadha_screen.dart';
 import 'package:boi_pustok_app_ui/screens/english_conver_screen.dart';
+import 'package:boi_pustok_app_ui/screens/english_shikhar_poddhoti_screen.dart';
 import 'package:boi_pustok_app_ui/screens/hadis_golpo_screen.dart';
+import 'package:boi_pustok_app_ui/screens/iccha_shokti_screen.dart';
 import 'package:boi_pustok_app_ui/screens/islamic_name_screen.dart';
 import 'package:boi_pustok_app_ui/screens/jokes_screen.dart';
+import 'package:boi_pustok_app_ui/screens/life_change_screen.dart';
+import 'package:boi_pustok_app_ui/screens/manob_deho_screen.dart';
+import 'package:boi_pustok_app_ui/screens/math_formula_screen.dart';
 import 'package:boi_pustok_app_ui/screens/namaz_sura_doa_screen.dart';
+import 'package:boi_pustok_app_ui/screens/rohossomoy_prithibi_screen.dart';
+import 'package:boi_pustok_app_ui/screens/shishuder_rupkotha_screen.dart';
+import 'package:boi_pustok_app_ui/screens/smart_phone_somossa_somadhan_screen.dart';
 import 'package:boi_pustok_app_ui/screens/sms_screen.dart';
+import 'package:boi_pustok_app_ui/screens/sofol_houyar_upai_screen.dart';
 import 'package:boi_pustok_app_ui/widgets/appbar_leading.dart';
 import 'package:flutter/material.dart';
 
@@ -31,6 +42,17 @@ class _HomeScreenState extends State<HomeScreen>
     const IslamicNameScreen(),
     const HadisGolpoScreen(),
     const NamazSuraDoaScreen(),
+    const AyenKanonScreen(),
+    const MathFormulaScreen(),
+    const SofolHouyarUpaiScreen(),
+    const LifeChangeScreen(),
+    const ShiShuderRupkothaScreen(),
+    const EnglishShikharPoddhotiScreen(),
+    const IcchaShoktiScreen(),
+    const SmartPhoneSomossaSomadhanScreen(),
+    const RohossomoyPrithibiScreen(),
+    const BoiPustokScreen(),
+    const ManobDehoScreen()
   ];
 
   List<String> textList = [
@@ -48,7 +70,7 @@ class _HomeScreenState extends State<HomeScreen>
     "গণিতের সূত্র",
 
     "সফল হওয়ার\nউপায়",
-    "জীবন পরিবর্তন হওয়ার বাণী",
+    "জীবন পরিবর্তন\nহওয়ার বাণী",
     "শিশুদের\nরূপকথার গল্প",
 
     "ইংরেজি শেখার\nপদ্ধতি",
@@ -57,7 +79,7 @@ class _HomeScreenState extends State<HomeScreen>
 
     "রহস্যময় পৃথিবী",
     "বই পুস্তক সম্পর্কে",
-    "বই\nপুস্তক সম্পর্কে",
+    "মানেবদেহের\nগুরুত্বপূর্ণ তথ্য",
   ];
   List<String> imageList= [
 
@@ -127,7 +149,7 @@ class _HomeScreenState extends State<HomeScreen>
                   
                   "বইয়ের তালিকা", 
                   textAlign: TextAlign.center,
-                  style: TextStyle(color: Colors.white, fontSize: 16.0, fontWeight: FontWeight.bold)),
+                  style: TextStyle(color: Colors.white, fontSize: 14.0, fontWeight: FontWeight.bold)),
               ),
             ),
           )
@@ -142,68 +164,70 @@ class _HomeScreenState extends State<HomeScreen>
 
             physics: const BouncingScrollPhysics(),
             itemCount: 18,
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3, crossAxisSpacing: 8, mainAxisSpacing: 8),
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+
+              crossAxisCount: 3, crossAxisSpacing: 8, mainAxisSpacing: 8
+            ),
             itemBuilder: (constext, index){
 
-            return Container(
+            return GestureDetector(
 
-                    height: 500.0, width: 150.0,
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
+              onTap: (){
                 
-                      borderRadius: BorderRadius.circular(10.0), border: Border.all(color: Theme.of(context).primaryColor, width: 2.0)
-                    ),
-                
-                    child: Center(
-
-                      child: Column(
-                
-                        children: [
-                          
-                          const SizedBox(height: 10.0),
-
-                          Container(
-                              
-                              height: 65.0, width: 65.0,
-                              decoration: BoxDecoration(
-                              
-                                borderRadius: BorderRadius.circular(10.0),
-                                border: Border.all(color: Colors.red, width: 1.0)
-                              ),
-                              child: ClipRRect(
-                              
-                                borderRadius: BorderRadius.circular(10.0),
-                                child: Image.asset(imageList[index], fit: BoxFit.fill),
-                              ),
-                          ),
-
-                          const SizedBox(height: 8.0),
-
-                          GestureDetector(
-                            
-                            onTap: (){
-
-                              if(selectedText == index)
-                              {
-                                Navigator.push(context, MaterialPageRoute(builder: (context) => screensList[index]));
-                              }
-                              setState(() {
+                setState(() {
                                 
-                                selectedText = index;
-                              });
-                            },
+                  selectedText = index;
+                });
 
-                            child: Text(
+                Navigator.push(context, MaterialPageRoute(builder: (context) => screensList[index]));
 
-                              textList[index], 
-                              textAlign: TextAlign.center, 
-                              style: selectedText == index ? TextStyle(color: Theme.of(context).primaryColor) : const TextStyle(color: Colors.black)
-                            ) 
-                          ),
-                        ],
-                      ),
-                    ),
+              },
+              child: Container(
             
+                decoration: BoxDecoration(
+                  
+                  borderRadius: BorderRadius.circular(10.0), 
+                  border: Border.all(color: Theme.of(context).primaryColor, width: 2.0)
+                ),
+                  
+                child: Center(
+            
+                  child: Column(
+                          
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                            
+                      const SizedBox(height: 10.0),
+            
+                      Container(
+                                
+                        height: 65.0, width: 65.0,
+                        decoration: BoxDecoration(
+                                
+                          borderRadius: BorderRadius.circular(10.0),
+                          border: Border.all(color: Colors.red, width: 1.0)
+                        ),
+                        child: ClipRRect(
+                                
+                          borderRadius: BorderRadius.circular(10.0),
+                          child: Image.asset(imageList[index], fit: BoxFit.fill),
+                        ),
+                      ),
+            
+                      const SizedBox(height: 8.0),
+            
+                      Text(
+            
+                        textList[index], 
+                        textAlign: TextAlign.center, 
+                        style: selectedText == index ? TextStyle(color: Theme.of(context).primaryColor) : const TextStyle(color: Colors.black)
+                      ),
+                    ],
+                  ),
+                ),
+              
+              ),
             );
           },
         ),

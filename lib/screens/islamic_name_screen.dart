@@ -6,10 +6,10 @@ class IslamicNameScreen extends StatefulWidget {
   const IslamicNameScreen({ Key? key }) : super(key: key);
 
   @override
-  _EnglishConverScreenState createState() => _EnglishConverScreenState();
+  _IslamicNameScreenState createState() => _IslamicNameScreenState();
 }
 
-class _EnglishConverScreenState extends State<IslamicNameScreen> 
+class _IslamicNameScreenState extends State<IslamicNameScreen> 
 {
 
   List<String> islamicNameList = [

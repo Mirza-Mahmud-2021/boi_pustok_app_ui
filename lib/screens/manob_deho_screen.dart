@@ -1,27 +1,29 @@
 import 'package:boi_pustok_app_ui/widgets/appbar_leading.dart';
 import 'package:flutter/material.dart';
 
-class JokesScreen extends StatefulWidget {
+class ManobDehoScreen extends StatefulWidget {
 
-  const JokesScreen({ Key? key }) : super(key: key);
+  const ManobDehoScreen({ Key? key }) : super(key: key);
 
   @override
-  _JokesScreenState createState() => _JokesScreenState();
+  _ManobDehoScreenState createState() => _ManobDehoScreenState();
 }
 
-class _JokesScreenState extends State<JokesScreen> 
+class _ManobDehoScreenState extends State<ManobDehoScreen>
 {
 
-  List<String> jokesList = [
+  List<String> shishuderRupkotharList = [
 
-    "স্বামী স্ত্রী জোকস",
-    "ছাত্র শিক্ষক জোকস",
-    "প্রেমিক প্রেমিকার জোকস",
-    "বন্ধুদের জোকস",
-    "মিরাক্কেল জোকস",
-    "চোর-পুলিশ",
-    "নাসিরুদ্দিন হোজ্জা",
-    "গোপাল ভাঁড়"
+    "পর্ব-১",
+    "পর্ব-১",
+    "পর্ব-১",
+    "পর্ব-১",
+    "পর্ব-১",
+    "পর্ব-১",
+    "পর্ব-১",
+    "পর্ব-১",
+    "পর্ব-১",
+    "পর্ব-১",
   ];
 
   @override
@@ -41,7 +43,7 @@ class _JokesScreenState extends State<JokesScreen>
 
           Container(
 
-            width: 150.0,
+            width: 200.0,
             margin: const EdgeInsets.all(8.0),
             padding: const EdgeInsets.all(2.0),
             alignment: Alignment.center,
@@ -52,7 +54,7 @@ class _JokesScreenState extends State<JokesScreen>
             ),
             child: SizedBox(
 
-              width: 150.0, height: 30.0,
+              width: 200.0, height: 30.0,
               child: MaterialButton(
 
                 elevation: 0, focusElevation: 0, hoverElevation: 0, highlightElevation: 0,
@@ -61,11 +63,11 @@ class _JokesScreenState extends State<JokesScreen>
                 onPressed: (){},
                 child: const Text(
 
-                  "জোকস", 
+                  "মানেবদেহের গুরুত্বপূর্ণ তথ্য", 
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.white, 
-                    fontSize: 16.0, fontWeight: FontWeight.w600
+                    fontSize: 14.0, fontWeight: FontWeight.bold
                   )
                 ),
               ),
@@ -79,7 +81,7 @@ class _JokesScreenState extends State<JokesScreen>
         child: ListView.separated(
 
           scrollDirection: Axis.vertical,
-          itemCount: jokesList.length,
+          itemCount: shishuderRupkotharList.length,
           separatorBuilder: (_, index) => const SizedBox(height: 8.0),
           itemBuilder: (context, index){
 
@@ -106,9 +108,9 @@ class _JokesScreenState extends State<JokesScreen>
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
                 child: Text(
 
-                  jokesList[index],
+                  shishuderRupkotharList[index],
                   textAlign: TextAlign.center,
-                  style: const TextStyle(color: Colors.white, fontSize: 20.0, fontWeight: FontWeight.w700),
+                  style: const TextStyle(color: Colors.white, fontSize: 18.0, fontWeight: FontWeight.w700),
                 ),
               ),
             );

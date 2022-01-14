@@ -1,27 +1,29 @@
 import 'package:boi_pustok_app_ui/widgets/appbar_leading.dart';
 import 'package:flutter/material.dart';
 
-class JokesScreen extends StatefulWidget {
+class BoiPustokScreen extends StatefulWidget {
 
-  const JokesScreen({ Key? key }) : super(key: key);
+  const BoiPustokScreen({ Key? key }) : super(key: key);
 
   @override
-  _JokesScreenState createState() => _JokesScreenState();
+  _BoiPustokScreenState createState() => _BoiPustokScreenState();
 }
 
-class _JokesScreenState extends State<JokesScreen> 
+class _BoiPustokScreenState extends State<BoiPustokScreen>
 {
 
-  List<String> jokesList = [
+  List<String> shishuderRupkotharList = [
 
-    "স্বামী স্ত্রী জোকস",
-    "ছাত্র শিক্ষক জোকস",
-    "প্রেমিক প্রেমিকার জোকস",
-    "বন্ধুদের জোকস",
-    "মিরাক্কেল জোকস",
-    "চোর-পুলিশ",
-    "নাসিরুদ্দিন হোজ্জা",
-    "গোপাল ভাঁড়"
+    "পর্ব-১",
+    "পর্ব-১",
+    "পর্ব-১",
+    "পর্ব-১",
+    "পর্ব-১",
+    "পর্ব-১",
+    "পর্ব-১",
+    "পর্ব-১",
+    "পর্ব-১",
+    "পর্ব-১",
   ];
 
   @override
@@ -61,11 +63,11 @@ class _JokesScreenState extends State<JokesScreen>
                 onPressed: (){},
                 child: const Text(
 
-                  "জোকস", 
+                  "বই পুস্তক সম্পর্কে", 
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.white, 
-                    fontSize: 16.0, fontWeight: FontWeight.w600
+                    fontSize: 14.0, fontWeight: FontWeight.bold
                   )
                 ),
               ),
@@ -79,7 +81,7 @@ class _JokesScreenState extends State<JokesScreen>
         child: ListView.separated(
 
           scrollDirection: Axis.vertical,
-          itemCount: jokesList.length,
+          itemCount: shishuderRupkotharList.length,
           separatorBuilder: (_, index) => const SizedBox(height: 8.0),
           itemBuilder: (context, index){
 
@@ -106,9 +108,9 @@ class _JokesScreenState extends State<JokesScreen>
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
                 child: Text(
 
-                  jokesList[index],
+                  shishuderRupkotharList[index],
                   textAlign: TextAlign.center,
-                  style: const TextStyle(color: Colors.white, fontSize: 20.0, fontWeight: FontWeight.w700),
+                  style: const TextStyle(color: Colors.white, fontSize: 18.0, fontWeight: FontWeight.w700),
                 ),
               ),
             );
